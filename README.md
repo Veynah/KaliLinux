@@ -42,3 +42,8 @@ There are a loot of VM softwares. It all depends on which one best suits your ne
 - **Parallels**: The best VM software to run a Windows VM on MacOS.<br>
 - **QEMU**: The best VM software for Linux users.It's open source and free of charge.<br>
 - **ETC,ETC,...**: There are a lot more VM softwares on the market.Just google the one that suits you best.<br>
+
+<h2>Linux commands</h2>
+<h3>Linux fileSystem</h3>
+Since Linux runs on Unix, it uses it's File System (documentation on this topic:https://www.geeksforgeeks.org/unix-file-system/)<br>
+<img src='./img/2.LinuxFilesystem.png' width=40%>
