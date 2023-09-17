@@ -47,7 +47,7 @@ There are a loot of VM softwares. It all depends on which one best suits your ne
 <h3>Linux fileSystem</h3>
 Since Linux runs on Unix, it uses it's File System (documentation on this topic:https://www.geeksforgeeks.org/unix-file-system/)<br>
 <br>
-<img src='./img/2.LinuxFilesystem.png' width=40%><h6>page 5 from Linux Basics for Hackers - Occupytheweb</h6>
+<img src='./img/2.LinuxFilesystem.png' width=60%><h6>page 5 from Linux Basics for Hackers - Occupytheweb</h6>
 
 Typing: <br>
 ```
