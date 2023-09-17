@@ -46,4 +46,38 @@ There are a loot of VM softwares. It all depends on which one best suits your ne
 <h2>Linux commands</h2>
 <h3>Linux fileSystem</h3>
 Since Linux runs on Unix, it uses it's File System (documentation on this topic:https://www.geeksforgeeks.org/unix-file-system/)<br>
-<img src='./img/2.LinuxFilesystem.png' width=40%>
+<br>
+<img src='./img/2.LinuxFilesystem.png' width=40%><h6>page 5 from Linux Basics for Hackers - Occupytheweb</h6>
+
+Typing: <br>
+```
+cd /
+```
+Will cd (change directory) you to / which is the root of the filesystem <br>
+<br>Typing
+```
+pwd
+```
+(print working directory) will write the full pathname of the current working directory to the standard output.Like this
+<img src='./img/4.rootAndCommands.png' width=70%><br>
+In this screenshot you can see that pwd outputs /, that's because it's where we are after cd'ing to /<br>
+As you can also see, we're logged in as root.<br>
+That's because root is the superuser that has access to everything in the OS.<br>
+If you type:
+```
+whoami
+```
+You'll see this:<br>
+<img src='./img/3.whoami.png' width=30%><br>
+I'm going to explain how to log in as root after explaining the other commands shown of the previous screenshot.<br>
+<br>The:
+```
+ls
+```
+command stands for listing, adding -a will show you all the files/directories in your current directory, -h for human readable, -l for long or combine them like in the exemple.<br>
+There are other options you can add to a command and the best way to find these option is the command:
+```
+man
+```
+For exemple, *man ls* will show you this:<br>
+<img src='./img/5.manls.png' width=80%><br>
