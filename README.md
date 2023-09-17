@@ -80,4 +80,4 @@ There are other options you can add to a command and the best way to find these 
 man
 ```
 For exemple, *man ls* will show you this:<br>
-<img src='./img/5.manls.png' width=80%><br>
+<img src='./img/5.manls.png' width=90%><br>
