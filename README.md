@@ -18,5 +18,5 @@ A Virtual Machine (VM) is a software-based emulation of a computer system that r
 <h2>How do Virtual Machines operate ?</h2>
 Virtual Machines operate by using a software layer called a "hypervisor" to emulate hardware resources. The hypervisor allocates these emulated hardware resources to each VM, making it possible to run multiple OS instances simultaneously.
 <p>
-![Alt text](img/1.How%20VMs%20operate.png)
+![Alt text](img/1.How_VMs_operate.png)
 </p>
