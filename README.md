@@ -70,6 +70,7 @@ whoami
 You'll see this:<br>
 <img src='./img/3.whoami.png' width=30%><br>
 I'm going to explain how to log in as root after explaining the other commands shown of the previous screenshot.<br>
+But for the note root is the gigachad of the linux system.<br>
 <br>The:
 ```
 ls
@@ -81,3 +82,21 @@ man
 ```
 For exemple, *man ls* will show you this:<br>
 <img src='./img/5.manls.png' width=90%><br>
+
+The:
+```
+locate
+```
+command is to locate things easily and fast.<br>
+Here is what it looks like<br>
+The problem of locate is that it gives us to much information so linux has another command in order to find exactly what we need.
+<img src='./img/6.locate.png' width=70%><br>
+
+And that command is:
+The:
+```
+whereis
+```
+that is used to locate the binary executable files of a program. Additionally, it can also locate the source code and manual page files for the program if they are present.<br>
+Example:<br>
+<img src='./img/7.whereis.png' width=100%><br>
