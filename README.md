@@ -83,7 +83,7 @@ man
 For exemple, *man ls* will show you this:<br>
 <img src='./img/5.manls.png' width=90%><br>
 
-The:
+<br>The:
 ```
 locate
 ```
@@ -92,7 +92,7 @@ Here is what it looks like<br>
 The problem of locate is that it gives us to much information so linux has another command in order to find exactly what we need.
 <img src='./img/6.locate.png' width=70%><br>
 
-And that command is:
+<br>And that command is:
 The:
 ```
 whereis
@@ -100,3 +100,11 @@ whereis
 that is used to locate the binary executable files of a program. Additionally, it can also locate the source code and manual page files for the program if they are present.<br>
 Example:<br>
 <img src='./img/7.whereis.png' width=100%><br>
+
+<br>There is also another command used to locate a specific file associated with an executable command. It's the command:
+```
+which
+```
+<img src='./img/8.which.png' width=30%><br>
+
+whereis and which both locate command related files. But which is more focused on finding the executable in the PATH, whereas whereis provides a comprehensive search, locating binaries, source files, and man pages.
