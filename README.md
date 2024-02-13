@@ -108,3 +108,120 @@ which
 <img src='./img/8.which.png' width=30%><br>
 
 whereis and which both locate command related files. But which is more focused on finding the executable in the PATH, whereas whereis provides a comprehensive search, locating binaries, source files, and man pages.
+
+<br>
+<h3>the command "find", a powerful command</h3>
+The find command in UNIX and Linux is a powerful utility for searching and locating files and directories 
+within the filesystem based on various criteria such as names, sizes, types,<b> permissions </b>, modification dates
+ and more. Its versatility and ability to execute commands on the files it finds make it an indispensable tool for
+ system administration, scription, and daily file management tasks.
+ <br>
+
+```
+find [path...] [options...] [expression]
+```
+<h4>Criteria:</h4> <br>
+
+- **By Name :**  `-name 'filename'` searches for files taht match the given filename. User wildcards ('*', '?') for patterns.
+- **By Type :** `-type f` for files, `-type d` for directories, etc.
+- **By Modification Time :** `-mtime +n` for files modified more than n days ago, `-mtime -n` for files modified less than n days ago.
+- **By Size :** `-size +nM` for files largen than n Megabytes, `-size -nM` for smaller.
+- **By Permissions :** `-perm 644` for files with a specific permissions.
+- **By Owner :** `-user username` for files owned by a specific user.
+- **By Group :** `-group groupname` for files belonging gt oa specific group.
+
+Find can also perform action on located files:
+
+- **`-print`** : Displays the path of the found items(default action).
+- **`-exec`** : Execute a command on each found item.
+- **`-delete`** : Delete the found items.
+- **`-ls`** : Lists the found items in "ls -l" format.
+
+<h4>Power and Flexibility:</h4> <br>
+
+- **Pipelines and redirection :** `find` can be combined with other commands using pipes (' | ') and 
+redirection (' > ', '>>') for complex workflows.
+- **Custom scripts :** Use `-exec` to run custom scripts on each found item for bespoke processing tasks.
+- **Complex expressions :** Combine criteria with logical operators (' -and ', ' -or ', ' -not ') for precised searches.
+
+<h4>Caution:</h4> <br>
+
+- **Performance :** Searches starting from root('/') or other large directories can be time-consuming.
+- **Deletion :** the `-delete` action is irreversible. Use it with caution, preferable with `-print` first to see what would be deleted.
+
+<br>
+<h3>Piping and grep</h3>
+
+Piping and `grep` command are fundamental concepts in Linux and Unix-like operating systems, allowing for powerful
+command-line data processing and manipulation. Piping, denoted by the pipe character `|`, is a mechanism to pass the output
+of one command as the input to another command. This allows you to chain together a sequence of commands, creating a 
+pipeline that can perform complex data processing tasks. Piping is a cornerstone of Unix and Linux philosophy, which 
+emphasizes small, modular utilities that do one thing well and can be combined in warious ways.
+<br>
+
+`grep` is a command-line utility for searching plain-text data sets for lines that match a regular expression.
+Its name comes from the `ed` command `g/re/p`(globaly search a regular expression and print)
+<h4>Basic usage of grep:</h4>
+
+- **Search for a specific string in a file:** `grep "search_string" filename`
+- **Search for a pattern in multiplefiles:** `grep "patern" file1 file2 file3`
+- **Example:** You want to find rockyou.txt and check if somepassword of yours is in there <br>
+
+<img src='./img/9.grep.png' width=70%><br>
+<br>
+
+<h3>Creating files</h3>
+
+`touch` creates empty files. It can also update the access and modification times of a file, but if the file
+doesn't exist, `touch` creates a new empty file.
+```
+touch filename
+```
+
+<br>
+
+`echo` is primarily used to display a line of text, but when combined with redirection operators, it can also create a 
+file and write content on it.
+```
+echo "some content" > filename
+```
+'>' writes the output of `echo` to `filename` creating the file if it doesn't exist. If it exists, this overwrites its content.
+">>' appends the output to the file instead of overwriting it. <br>
+<img src='./img/10.echo.png' width=70%>
+<br>
+
+<br>
+
+`printf` is similar to echo but offers more control over the output format, making it usefull for scripting.
+
+```
+printf "some content\n" > filename
+``` 
+
+<br>
+
+`cat` concatenates and displays file content(as seen above), but with redirection, it can create files and append content.<br>
+
+`cat > filename` will make you type content into the terminal. It will override existing data. Press CTRL+D to end
+the input and create/update the file.
+`cat >> filename` will do append your input to the file.
+
+<br>
+<img src='./img/11.cat.png' width=70%>
+
+<br>
+
+`tee` command reads from standart input and writes to standard output and files. When used with `echo` or on its own
+pipeline, it can create files. `-a` appends content to existing files without overwriting.
+
+```
+echo "content" | tee filename
+```
+ <br>
+
+`cp` creates a new file as a copy of an existing file
+
+```
+cp existingfile newfile
+```
+<img src='./img/12.png' width=70%>
