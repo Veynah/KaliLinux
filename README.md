@@ -58,7 +58,7 @@ Will cd (change directory) you to / which is the root of the filesystem <br>
 ```
 pwd
 ```
-(print working directory) will write the full pathname of the current working directory to the standard output.Like this
+(print working directory) will write the full pathname of the current working directory to the standard output.Like this <br>
 <img src='./img/4.rootAndCommands.png' width=70%><br>
 In this screenshot you can see that pwd outputs /, that's because it's where we are after cd'ing to /<br>
 As you can also see, we're logged in as root.<br>
@@ -89,7 +89,7 @@ locate
 ```
 command is to locate things easily and fast.<br>
 Here is what it looks like<br>
-The problem of locate is that it gives us to much information so linux has another command in order to find exactly what we need.
+The problem of locate is that it gives us to much information so linux has another command in order to find exactly what we need.<br>
 <img src='./img/6.locate.png' width=70%><br>
 
 <br>And that command is:
@@ -204,10 +204,10 @@ printf "some content\n" > filename
 
 `cat > filename` will make you type content into the terminal. It will override existing data. Press CTRL+D to end
 the input and create/update the file.
-`cat >> filename` will do append your input to the file.
+`cat >> filename` will do append your input to the file.<br>
+<img src='./img/11.cat.png' width=70%>
 
 <br>
-<img src='./img/11.cat.png' width=70%>
 
 <br>
 
@@ -225,3 +225,55 @@ echo "content" | tee filename
 cp existingfile newfile
 ```
 <img src='./img/12.png' width=70%>
+
+<br>
+<br>
+
+`dd` is a low-level utility for converting and copying files. It can create files by copying data frmo a source to 
+a destination. Exemple copy one of the hello file to a new one:
+```
+dd if=hello.txt of=world.txt
+```
+<img src='./img/13-dd.png' width=70%>
+
+<br>
+
+<br>
+
+Opening a non-existent file with a text editor and saving it creates the file with `vim`, `nano`, `emacs`, `nvim`, etc..
+
+<br>
+
+<br>
+
+`mktemp` can create a temporary file or directory. Useful in scripts for creating temporary files securely.
+
+<br>
+
+<br>
+
+`mkdir` can create directories.
+```
+mkdir newDirectory
+```
+you can for exemple create a new directory and copy the files you have unto that new directory like this:
+<img src='./img/14-mkdir.png' width=70%>
+<br>
+tree will list the contents of directories in a tree-like format. Then you can create the new directory and use
+cp to copy whatever you want.
+
+<br>
+
+<br>
+
+`mv` command can be used to move a file or directory to a new location of simply give an existing file a new name. Example:<br>
+<img src='./img/15-mv.png' width=70%>
+
+<br>
+
+<br>
+
+`rmdir` will remove 'empty' directories. If the directory is not empty, you'll have a warning message that the directory
+is not empty. In order to remove a non empty directory, you'll need to remove a dir and its content recursevly with
+`rm -r` like this: <br>
+<img src='./img/16-rm.png' width=70%>
