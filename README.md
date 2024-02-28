@@ -277,3 +277,92 @@ cp to copy whatever you want.
 is not empty. In order to remove a non empty directory, you'll need to remove a dir and its content recursevly with
 `rm -r` like this: <br>
 <img src='./img/16-rm.png' width=70%>
+
+<br>
+
+<h3>Viewing files</h3>
+
+`cat "file"` will display the content of a file like said before.
+
+<br>
+
+`less filename` allows backward and forward navigation through the contents of a file or output stream. <br>
+It's espacially usefull for large files because it does not need to read the entire file before starting,<br>
+making it faster and more efficient than `cat`for large files. Here are (some of) the commands : 
+
+***Down Arrow, Enter, e, j:*** Moves forward by one line.
+
+***Up Arrow, y, k:*** Moves backward by one line.
+
+***Space bar, Page Down:*** Advances forward by one page.
+
+***Page Up, b:*** Moves backward by one page.
+
+***Right Arrow:*** Scrolls the view to the right.
+
+***Left Arrow:*** Scrolls the view to the left.
+
+***Home, g:*** Jumps to the beginning of the file.
+
+***End, G:*** Jumps to the end of the file.
+
+***/[string]:*** Searches forward for the specified string.
+
+***?[string]:*** Searches backward for the specified string.
+
+***n:*** Finds the next occurrence in a search.
+
+***N:*** Finds the previous occurrence in a search.
+
+***q:*** Exits the less command.
+
+<br>
+
+<br>
+
+`more filename` is similar to `less` but with less functionnality. it allows to scroll up one screen-full at a time,
+and scroll down either one line or one screen-full:
+
+***Space :*** go to the next page in accordance with terminal's size.
+
+***b :*** go back one page.
+
+***enter :*** scroll down one line.
+
+***= :*** display the current line number.
+
+***":v"  :*** start up the vi text editor at the current line.
+
+<br>
+
+<br>
+
+`head filename` displays the first few lines of a file (default 10). Useful for quickly peeking
+at the beginning of files. `head -n filename` for a specific number of lines at the beginning of the file.
+
+<img src='./img/17-head.png' width=70%>
+
+<br>
+
+<br>
+
+`tail filename` displays the last few lines of a file. `-n` for the specific number of lines to display.
+`-f` to follow the file's growth.
+<img src='./img/18-tail.png' width=70%>
+
+<br>
+
+<br>
+
+`nl filename` similar to `cat` but outputs the content with the line numbers. `-b a` to number all lines.
+`-b t` to number non-empty lines.
+
+<br>
+
+`tac filename` is like cat but it displays the file content in reverse(last line first) as we can see in this exemple:
+<img src='./img/19-tac.png' width=70%>
+
+<br>
+
+<br>
+
