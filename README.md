@@ -359,7 +359,8 @@ at the beginning of files. `head -n filename` for a specific number of lines at 
 
 <br>
 
-`tac filename` is like cat but it displays the file content in reverse(last line first) as we can see in this exemple:
+`tac filename` is like cat but it displays the file content in reverse(last line first) <br>
+as we can see in this exemple:
 <img src='./img/19-tac.png' width=70%>
 
 <br>
