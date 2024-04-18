@@ -338,7 +338,7 @@ and scroll down either one line or one screen-full:
 <br>
 
 `head filename` displays the first few lines of a file (default 10). Useful for quickly peeking
-at the beginning of files. `head -n filename` for a specific number of lines at the beginning of the file.
+at the beginning of files. `head -n filename` for a specific number of lines at the beginning of the file. <br>
 
 <img src='./img/17-head.png' width=70%>
 
@@ -347,7 +347,7 @@ at the beginning of files. `head -n filename` for a specific number of lines at 
 <br>
 
 `tail filename` displays the last few lines of a file. `-n` for the specific number of lines to display.
-`-f` to follow the file's growth.
+`-f` to follow the file's growth.<br>
 <img src='./img/18-tail.png' width=70%>
 
 <br>
@@ -360,10 +360,30 @@ at the beginning of files. `head -n filename` for a specific number of lines at 
 <br>
 
 `tac filename` is like cat but it displays the file content in reverse(last line first) <br>
-as we can see in this exemple:
+as we can see in this exemple:<br>
 <img src='./img/19-tac.png' width=70%>
 
 <br>
 
 <br>
+
+`awk {print} filename` is primarely a pattern scanning and processing language command, `awk`can
+be used to view file content with advanced filtering, processing and formatting.<br>
+Exemple:<br>
+<img src='./img/20-awk.png' width=70%>
+
+<br>
+
+<br>
+
+`nl` displays line numbers and since many commands can be combined together we can make something like this:
+<br>
+<img src='./img/21-awk-tac-nl-head.png' width=70%><br>
+use `awk` for a pattern, `tac` to display the content in reverse, `nl` to display the number of lines 
+and `head -n 6` for the first 6 lines.
+
+<br>
+
+<br>
+
 
